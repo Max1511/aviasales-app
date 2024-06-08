@@ -1,0 +1,39 @@
+.ticket {
+    background-color: white;
+    box-shadow: 0 0 2px 0 gray;
+    border-radius: 5px;
+    font-family: "Open Sans";
+    padding: 15px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2196F3;
+    text-transform: uppercase;
+}
+
+.race {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 20px;
+}
+
+.top-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #A0B0B9;
+    text-transform: uppercase;
+}
+
+.bottom-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-top: -10px;
+}

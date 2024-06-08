@@ -1,0 +1,38 @@
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+button {
+    width: 50%;
+    background-color: white;
+    border: 1px solid #DFE5EC;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    font-family: "Open Sans";
+    vertical-align: top;
+    padding: 15px;
+}
+
+button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button:hover {
+    background-color: #F1FCFF;
+}
+
+button:disabled {
+    background-color: #2196F3;
+    color: white;
+}

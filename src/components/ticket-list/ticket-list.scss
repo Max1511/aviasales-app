@@ -1,0 +1,43 @@
+.ticket-list {
+    margin: 0;
+}
+
+.ticket-list li {
+    margin-top: 20px;
+}
+
+.spin {
+    display: flex;
+    justify-content : center;
+    padding: 20px;
+}
+
+.error-message {
+    margin-top: 20px;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 600;
+    color: #4A4A4A;
+    text-align: center;
+    display: block;
+}
+
+.show-more-button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #2196F3;
+    border: 1px solid #DFE5EC;
+    outline: none;
+    font-family: "Open Sans" sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    vertical-align: top;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.show-more-button:hover {
+    background-color: #196cb1;
+}

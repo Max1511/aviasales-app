@@ -1,3 +1,5 @@
+@import '../../style';
+
 section {
     display: flex;
     justify-content: space-around;
@@ -7,32 +9,32 @@ section {
 button {
     width: 50%;
     background-color: white;
-    border: 1px solid #DFE5EC;
+    border: 1px solid $border-color;
     outline: none;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: $main-font-weight;
     text-transform: uppercase;
-    color: #4A4A4A;
-    font-family: "Open Sans";
+    color: $main-text-color;
+    font-family: $main-font;
     vertical-align: top;
     padding: 15px;
 }
 
 button:first-child {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
 }
 
 button:last-child {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
 }
 
 button:hover {
-    background-color: #F1FCFF;
+    background-color: $hover-color;
 }
 
 button:disabled {
-    background-color: #2196F3;
+    background-color: $design-color;
     color: white;
 }

@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import '../../style';
 
 .block {
     background-color: white;
     box-shadow: 0 0 2px 0 gray;
-    border-radius: 5px;
-    font-family: "Open Sans";
+    border-radius: $border-radius;
+    font-family: $main-font;
     padding: 15px;
 }
 
 .title {
     font-size: 12px;
-    font-weight: 600;
+    font-weight: $main-font-weight;
     text-transform: uppercase;
 }
 
@@ -21,5 +21,5 @@ ul {
 }
 
 li:hover {
-    background-color: #F1FCFF;
+    background-color: $hover-color;
 }

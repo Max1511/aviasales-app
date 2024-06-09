@@ -1,43 +1,47 @@
+@import '../../style';
+
+$distance: 20px;
+
 .ticket-list {
     margin: 0;
 }
 
 .ticket-list li {
-    margin-top: 20px;
+    margin-top: $distance;
 }
 
 .spin {
     display: flex;
-    justify-content : center;
-    padding: 20px;
+    justify-content: center;
+    padding: $distance;
 }
 
 .error-message {
-    margin-top: 20px;
-    font-family: "Open Sans";
+    margin-top: $distance;
+    font-family: $main-font;
     font-size: 24px;
-    font-weight: 600;
-    color: #4A4A4A;
+    font-weight: $main-font-weight;
+    color: $main-text-color;
     text-align: center;
     display: block;
 }
 
 .show-more-button {
     width: 100%;
-    margin-top: 20px;
-    background-color: #2196F3;
-    border: 1px solid #DFE5EC;
+    margin-top: $distance;
+    background-color: $design-color;
+    border: 1px solid $border-color;
     outline: none;
-    font-family: "Open Sans" sans-serif;
+    font-family: $main-font;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: $main-font-weight;
     text-transform: uppercase;
     color: white;
     vertical-align: top;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: $border-radius;
 }
 
 .show-more-button:hover {
-    background-color: #196cb1;
+    background-color: $hover-design-color;
 }

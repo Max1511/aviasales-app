@@ -1,6 +1,8 @@
+@import '../../style';
+
 body {
-    background-color: #F3F7FA;
-    color: #4A4A4A;
+    background-color: $main-background-color;
+    color: $main-text-color;
     margin: 0;
 }
 

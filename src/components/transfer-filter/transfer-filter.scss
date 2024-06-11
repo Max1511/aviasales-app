@@ -1,25 +1,59 @@
 @import '../../style';
 
+$check-mark: url('../../images/check-mark.svg');
+
 .block {
     background-color: white;
     box-shadow: 0 0 2px 0 gray;
     border-radius: $border-radius;
     font-family: $main-font;
-    padding: 15px;
+    font-size: 13px;
+    padding-bottom: 10px;
 }
 
 .title {
     font-size: 12px;
     font-weight: $main-font-weight;
     text-transform: uppercase;
+    padding: 15px 20px 5px 20px;
+    display: block;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    font-size: 13px;
+.transfer-list {
+    margin: 0;
 }
 
-li:hover {
+.transfer-list li {
+    padding: 10px 20px;
+}
+
+.transfer-list li:hover {
     background-color: $hover-color;
+}
+
+.transfer-list li input {
+    display: none;
+}
+
+.transfer-list li label {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.transfer-list li label:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid #9ABBCE;
+    border-radius: 2px;
+    display: block;
+}
+
+.transfer-list li input:checked + label:before {
+    background: no-repeat $check-mark;
+    background-position: 50% 50%;
+    border: 1px solid $design-color;
 }

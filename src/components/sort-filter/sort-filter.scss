@@ -1,40 +1,48 @@
 @import '../../style';
 
 section {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
 }
 
-button {
-    width: 50%;
+.sort-button {
+    width: 100%;
+}
+
+.sort-button input {
+	display: none;
+}
+
+.sort-button label {
     background-color: white;
     border: 1px solid $border-color;
     outline: none;
+    font-family: $main-font;
     font-size: 12px;
     font-weight: $main-font-weight;
     text-transform: uppercase;
     color: $main-text-color;
-    font-family: $main-font;
-    vertical-align: top;
+    text-align: center;
     padding: 15px;
+    display: block;
+    cursor: pointer;
 }
 
-button:first-child {
+.sort-button:first-child label {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
 }
 
-button:last-child {
+.sort-button:last-child label {
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
 }
 
-button:hover {
+.sort-button label:hover {
     background-color: $hover-color;
 }
 
-button:disabled {
+.sort-button input:checked + label {
     background-color: $design-color;
     color: white;
 }

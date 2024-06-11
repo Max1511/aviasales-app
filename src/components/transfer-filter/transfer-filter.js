@@ -7,12 +7,15 @@ import './transfer-filter.scss';
 const TransferFilter = ({ isFilteringAll, isFiltering, setTransferFilterAll, setTransferFilter }) => {
     const renderCheckbox = (text, checked, action) => {
         return (
-            <li onClick={action}>
+            <li>
                 <input
+                    id={text}
+                    name='transfer-input'
                     type='checkbox'
                     checked={checked}
+                    onClick={action}
                     readOnly/>
-                {text}
+                <label htmlFor={text}>{text}</label>
             </li>
         );
     };
@@ -22,7 +25,7 @@ const TransferFilter = ({ isFilteringAll, isFiltering, setTransferFilterAll, set
             <span className='title'>
                 Количество пересадок
             </span>
-            <ul>
+            <ul className='transfer-list'>
                 {renderCheckbox('Все', isFilteringAll, setTransferFilterAll)}
                 {renderCheckbox('Без пересадок', isFiltering[0], () => setTransferFilter(0))}
                 {renderCheckbox('1 пересадка', isFiltering[1], () => setTransferFilter(1))}

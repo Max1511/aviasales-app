@@ -6,6 +6,8 @@ const initialState = {
     isError: false
 };
 
+let maxId = 0;
+
 const tickets = (state = initialState, action) => {
     switch (action.type) {
     case 'SHOW_MORE_TICKETS':
@@ -16,7 +18,7 @@ const tickets = (state = initialState, action) => {
     case 'RECEIVE_TICKETS':
         return {
             ...state,
-            tickets: state.tickets.concat(action.json.tickets),
+            tickets: state.tickets.concat(action.json.tickets.map(ticket => ({ ...ticket, id: maxId++ }))),
             stop: action.json.stop,
             isLoading: false
         };

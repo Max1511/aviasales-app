@@ -4,14 +4,20 @@ import { connect } from 'react-redux';
 import { setSort, SortType } from '../../actions';
 import './sort-filter.scss';
 
-const SortFilter = ({currentType, setSort}) => {
+const SortFilter = ({ currentType, setSort }) => {
     const renderButton = (text, type) => {
         return (
-            <button
-                onClick={() => setSort(type)}
-                disabled={type === currentType}>
-                {text}
-            </button>
+            <div className='sort-button'>
+                <input
+                    id={type}
+                    name='sort-button'
+                    type='radio'
+                    checked={type === currentType}
+                    onClick={() => setSort(type)}/>
+                <label htmlFor={type}>
+                    {text}
+                </label>
+            </div>
         );
     };
 

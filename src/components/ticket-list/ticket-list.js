@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Spin } from 'antd';
 
@@ -8,7 +8,6 @@ import './ticket-list.scss';
 
 const TicketList = ({ tickets, count, isLoading, isError, isFilteringTransfer, sortType, showMoreTickets }) => {
 
-    const maxIdRef = useRef(0);
     const displayingTickets = tickets
         .filter(ticket => isFilteringTransfer[ticket.segments[0].stops.length] && isFilteringTransfer[ticket.segments[1].stops.length])
         .sort((ticket1, ticket2) => {
@@ -22,7 +21,7 @@ const TicketList = ({ tickets, count, isLoading, isError, isFilteringTransfer, s
         return displayingTickets
             .slice(0, count)
             .map(ticket =>
-                <li key={maxIdRef.current++}>
+                <li key={ticket.id}>
                     <Ticket data={ticket}/>
                 </li>
             );
